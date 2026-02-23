@@ -1,0 +1,155 @@
+# Dart/Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+*.dart.js
+*.dart.js.deps
+*.dart.js.map
+*.dart2js.js
+pubspec.lock
+
+# Android
+mobile-app/android/.gradle/
+mobile-app/android/captures/
+mobile-app/android/local.properties
+mobile-app/android/key.properties
+mobile-app/*.jks
+mobile-app/android/app/debug/
+mobile-app/android/app/profile/
+mobile-app/android/app/release/
+mobile-app/android/app/google-services.json
+
+# iOS
+mobile-app/ios/Pods/
+mobile-app/ios/.symlinks/
+mobile-app/ios/Flutter/Flutter.framework
+mobile-app/ios/Flutter/Flutter.podspec
+mobile-app/ios/**/*.mode1v3
+mobile-app/ios/**/*.mode2v3
+mobile-app/ios/**/*.moved-aside
+mobile-app/ios/**/*.pbxuser
+mobile-app/ios/**/*.perspectivev3
+mobile-app/ios/**/*.xccheckout
+mobile-app/ios/**/*.xcscmblueprint
+mobile-app/ios/**/*.xcworkspace
+mobile-app/ios/Flutter/App.framework
+mobile-app/ios/Flutter/ephemeral/
+mobile-app/ios/Runner/GeneratedPluginRegistrant.*
+mobile-app/ios/GoogleService-Info.plist
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+dist/
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.staging
+.env.production
+.env.test
+*.env
+
+# Secrets & Keys
+*.pem
+*.key
+*.crt
+*.p12
+*.keystore
+serviceAccountKey.json
+firebase-adminsdk*.json
+google-services.json
+GoogleService-Info.plist
+
+# Database
+*.sqlite
+*.db
+*.sql.bak
+dump.rdb
+
+# Logs
+logs/
+*.log
+npm-debug.log
+yarn-debug.log
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V2
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.vs/
+*.suo
+*.user
+
+# Test coverage
+coverage/
+.nyc_output/
+lcov.info
+*.lcov
+
+# Build artifacts
+*.apk
+*.aab
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Terraform
+infrastructure/terraform/.terraform/
+infrastructure/terraform/*.tfstate
+infrastructure/terraform/*.tfstate.backup
+infrastructure/terraform/.terraform.lock.hcl
+*.tfvars
+!example.tfvars
+
+# Docker
+docker-compose.override.yml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+.env/
+*.egg-info/
+dist/
+*.egg
+.pytest_cache/
+.mypy_cache/
+
+# Admin Dashboard (React build)
+admin-dashboard/build/
+admin-dashboard/node_modules/
+
+# Misc
+.cache/
+tmp/
+temp/
+uploads/
+recordings/
