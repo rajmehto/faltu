@@ -1,5 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const { authenticate, optionalAuth } = require('../middlewares/auth.middleware');
-router.get('/', optionalAuth, (req, res) => res.json({ success: true, data: [], message: 'wallet endpoint' }));
+const { authenticate } = require('../middlewares/auth.middleware');
+const walletController = require('../controllers/wallet.controller');
+
+router.get('/', authenticate, walletController.getWallet);
+router.get('/packages', authenticate, walletController.getCoinPackages);
+router.get('/transactions', authenticate, walletController.getTransactionHistory);
+router.post('/withdraw', authenticate, walletController.requestWithdrawal);
+router.get('/withdrawals', authenticate, walletController.getWithdrawalHistory);
+
 module.exports = router;

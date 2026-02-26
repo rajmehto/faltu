@@ -1,3 +1,13 @@
 const mongoose = require('mongoose');
-const schema = new mongoose.Schema({}, { timestamps: true, strict: false });
-module.exports = mongoose.model('Block', schema);
+
+const blockSchema = new mongoose.Schema({
+  blockerId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true, index: true },
+  blockedId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true, index: true },
+  reason: { type: String, maxlength: 200 },
+}, {
+  timestamps: true,
+});
+
+blockSchema.index({ blockerId: 1, blockedId: 1 }, { unique: true });
+
+module.exports = mongoose.model('Block', blockSchema);

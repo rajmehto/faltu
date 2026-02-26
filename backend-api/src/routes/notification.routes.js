@@ -1,5 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const { authenticate, optionalAuth } = require('../middlewares/auth.middleware');
-router.get('/', optionalAuth, (req, res) => res.json({ success: true, data: [], message: 'notification endpoint' }));
+const { authenticate } = require('../middlewares/auth.middleware');
+const notificationController = require('../controllers/notification.controller');
+
+router.get('/', authenticate, notificationController.getNotifications);
+router.get('/unread-count', authenticate, notificationController.getUnreadCount);
+router.put('/read-all', authenticate, notificationController.markAllAsRead);
+router.delete('/clear-all', authenticate, notificationController.clearAll);
+router.put('/:notificationId/read', authenticate, notificationController.markAsRead);
+router.delete('/:notificationId', authenticate, notificationController.deleteNotification);
+
 module.exports = router;
